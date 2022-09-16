@@ -1,6 +1,8 @@
 import BackupsPage from "./pages/BackupsPage";
+import DevicesPage from "./pages/DevicesPage";
 import MainPage from "./pages/MainPage";
-
+import ManagmentPage from "./pages/ManagmentPage"
+import OptionsPage from "./pages/OptionsPage";
 
 export const config = {
     style: {
@@ -21,13 +23,18 @@ export const config = {
         },
         Management: {
             path: '/mng', 
-            page: '',
+            page: <ManagmentPage />,
             index: 3
+        },
+        Devices: {
+            path: '/devices', 
+            page: <DevicesPage />,
+            index: 4
         },
         Options: {
             path: '/options', 
-            page: '',
-            index: 4
+            page: <OptionsPage />,
+            index: 5
         }
     }
 }
