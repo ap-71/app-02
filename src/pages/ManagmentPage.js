@@ -1,10 +1,10 @@
 import React from 'react'
-import Container from '../components/Container'
+import BasePage from './BasePage'
 
-export default function ManagmentPage() {
-  return (
-    <Container>
-      ManagmentPage
-    </Container>
-  )
+export default class ManagmentPage extends BasePage {
+  children() {
+    return (
+      <div>ManagmentPage</div>
+    )
+  }
 }

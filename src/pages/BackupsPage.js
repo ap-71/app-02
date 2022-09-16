@@ -1,10 +1,10 @@
 import React from 'react'
-import Container from '../components/Container'
+import BasePage from './BasePage'
 
-export default function BackupsPage() {
-  return (
-    <Container>
-      BackupsPage
-    </Container>
-  )
+export default class BackupsPage extends BasePage {
+  children() {
+    return (
+      <div>BackupsPage</div>
+    )
+  }
 }
