@@ -1,9 +1,11 @@
 import BackupsPage from "./pages/BackupsPage";
+import DashboardPage from "./pages/DashboardPage";
 import DevicesPage from "./pages/DevicesPage";
 import MainPage from "./pages/MainPage";
 import ManagmentPage from "./pages/ManagmentPage"
 import OptionsPage from "./pages/OptionsPage";
 
+let index = 0
 export const config = {
     style: {
         font: {
@@ -14,27 +16,32 @@ export const config = {
         Main: {
             path: '/', 
             page: <MainPage />,
-            index: 1
+            index: ++index
+        },
+        Dashboard: {
+            path: '/dashboard', 
+            page: <DashboardPage />,
+            index: ++index
         },
         Backups: {
             path: '/backups', 
             page: <BackupsPage />,
-            index: 2
+            index: ++index
         },
         Management: {
             path: '/mng', 
             page: <ManagmentPage />,
-            index: 3
+            index: ++index
         },
         Devices: {
             path: '/devices', 
             page: <DevicesPage />,
-            index: 4
+            index: ++index
         },
         Options: {
             path: '/options', 
             page: <OptionsPage />,
-            index: 5
+            index: ++index
         }
     }
 }
