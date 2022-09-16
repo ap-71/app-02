@@ -1,10 +1,10 @@
 import React from 'react'
 import Container from '../components/Container'
 
-export default function MainPage() {
+export default function BackupsPage() {
   return (
     <Container>
-      MainPage
+      BackupsPage
     </Container>
   )
 }
