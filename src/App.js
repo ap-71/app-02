@@ -1,16 +1,13 @@
 import { Route, Routes } from "react-router-dom";
 import { Navigation } from "./components/nav/Navigation";
-import MainPage from "./pages/MainPage"
+import { config } from "./config";
 
 function App() {
   return (
     <div className="App flex w-[100%] p-6 h-[100%]">
       <Navigation />
       <Routes >
-        <Route path="/" element={ <MainPage /> } />
-        {/* <Route path="/backups" element={ <BackupsPage /> } />
-        <Route path="/mng" element={ <ManagmentPage /> } />
-        <Route path="/options" element={ <OptionsPage /> } /> */}
+        { Object.keys(config.menu).map(key =>  <Route path={ config.menu[key].path } element={ config.menu[key].page } key={config.menu[key].index}  />) }
       </Routes>
     </div>
   );
